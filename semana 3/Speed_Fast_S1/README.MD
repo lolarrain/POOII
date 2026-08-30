@@ -39,8 +39,15 @@ src
 │   ├── Despachable.java
 │   └── Rastreable.java
 └── model
+    ├── ControladorDeEnvios.java
     ├── Pedido.java
     ├── PedidoComida.java
     ├── PedidoEncomienda.java
     └── PedidoExpress.java
 ```
+
+## Escalabilidad, reutilización y mantenibilidad
+
+La incorporación de una clase abstracta, polimorfismo e interfaces permite que el sistema pueda crecer sin modificar su estructura principal. Nuevos tipos de pedido pueden heredar de Pedido e implementar sus propias reglas, reutilizando los atributos y métodos comunes ya definidos.
+
+Además, las interfaces separan responsabilidades como despacho, cancelación y rastreo, evitando concentrar toda la lógica en una sola clase. Esto facilita modificar, ampliar o reutilizar funcionalidades específicas sin afectar innecesariamente al resto del sistema.
